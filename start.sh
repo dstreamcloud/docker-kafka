@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+export KAFKA_HOME=/opt/kafka
+export PATH=$KAFKA_HOME/bin:$PATH
 export INDEX=${HOSTNAME##*-}
 export BROKER_ID="broker.id=$INDEX"
 export KAFKA_ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$(hostname -f):9092"
