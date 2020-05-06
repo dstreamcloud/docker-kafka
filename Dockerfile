@@ -11,4 +11,4 @@ RUN chmod a+x /workspace/install.sh && /workspace/install.sh
 
 COPY start.sh /workspace/start.sh
 RUN chmod a+x /workspace/start.sh
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["/workspace/start.sh"]
